@@ -1,0 +1,248 @@
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ ./setup.sh
+🔧 Creazione ambiente di esercitazione...
+
+✅ Ambiente creato con successo!
+
+📁 Struttura creata in: /workspaces/lezione-bash02a-giannini/esercizi/
+
+Contenuto:
+/workspaces/lezione-bash02a-giannini/esercizi/
+├── archivio
+│   ├── budget_2023.xlsx
+│   ├── budget_2024.xlsx
+│   ├── documento_febbraio.pdf
+│   ├── documento_gennaio.pdf
+│   ├── documento_marzo.pdf
+│   ├── foto_milano_2023.jpg
+│   ├── foto_napoli_2024.jpg
+│   ├── foto_roma_2023.jpg
+│   ├── foto_roma_2024.jpg
+│   ├── note.txt
+│   ├── presentazione.pptx
+│   ├── readme.md
+│   ├── relazione_finale.docx
+│   └── relazione_intermedia.docx
+├── backup
+├── documenti
+│   ├── .config_segreto
+│   ├── appunti_database.txt
+│   ├── appunti_reti.txt
+│   ├── appunti_sicurezza.txt
+│   └── todo.txt
+├── log
+│   ├── accessi.log
+│   └── server.log
+├── progetti
+│   ├── mobile
+│   │   ├── MainActivity.java
+│   │   └── config.txt
+│   └── webapp
+│       ├── app.js
+│       ├── index.html
+│       └── style.css
+└── sandbox
+
+9 directories, 26 files
+
+🚀 Sei pronto per iniziare gli esercizi! Apri il README.md
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ cd /workspaces/lezione-bash02a-giannini/esercizi/documenti/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cat appunti_reti.txt 
+Lezione 1 - Modello OSI
+
+Il modello OSI (Open Systems Interconnection) è composto da 7 livelli:
+
+1. Fisico - trasmissione dei bit sul mezzo fisico
+2. Data Link - gestione dei frame e accesso al mezzo
+3. Rete - instradamento dei pacchetti (IP)
+4. Trasporto - comunicazione end-to-end (TCP, UDP)
+5. Sessione - gestione delle sessioni di comunicazione
+6. Presentazione - codifica e crittografia dei dati
+7. Applicazione - interfaccia con l'utente (HTTP, FTP, SMTP)
+
+Il modello TCP/IP semplifica questi livelli in 4:
+- Accesso alla rete (livelli 1-2)
+- Internet (livello 3)
+- Trasporto (livello 4)
+- Applicazione (livelli 5-7)
+
+Ogni livello comunica solo con il livello adiacente.
+Il principio di incapsulamento prevede che ogni livello aggiunga un header ai dati.
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ head -n 3 appunti_sicurezza.txt 
+Sicurezza Informatica - Concetti Base
+
+La triade CIA:
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ tail -n 5 todo.txt 
+
+Scadenze:
+- Backend: 15 marzo
+- Frontend: 30 marzo
+- Consegna finale: 15 aprile
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cd /workspaces/lezione-bash02a-giannini/esercizi/log/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ head -n 5 server.log 
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:10:30 [WARNING] Tentativo di accesso non autorizzato da 192.168.1.100
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ tail -n 3 server.log 
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ less accessi.log 
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cd /workspaces/lezione-bash02a-giannini/esercizi/documenti/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cp appunti_reti.txt appunti_reti_backup.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cp todo.txt ../backup/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ l
+appunti_database.txt  appunti_reti.txt  appunti_reti_backup.txt  appunti_sicurezza.txt  todo.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ ls ../backup/
+todo.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cd ..
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cp -r progetti/ backup/progetti
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls backup/
+progetti  todo.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls backup/progetti/
+mobile  webapp
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls backup/progetti/webapp/
+app.js  index.html  style.css
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cd docu
+bash: cd: docu: No such file or directory
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cd documenti/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ mw todo.txt attivita.txt
+bash: mw: command not found
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ mv todo.txt attivita.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ ls
+appunti_database.txt  appunti_reti.txt  appunti_reti_backup.txt  appunti_sicurezza.txt  attivita.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ mv attivita.txt ../archivio/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ ls
+appunti_database.txt  appunti_reti.txt  appunti_reti_backup.txt  appunti_sicurezza.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ ls ../archivio/
+attivita.txt  budget_2023.xlsx  budget_2024.xlsx  documento_febbraio.pdf  documento_gennaio.pdf  documento_marzo.pdf  foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg  note.txt  presentazione.pptx  readme.md  relazione_finale.docx  relazione_intermedia.docx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/documenti (main) $ cd ../progetti/webapp/
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ mv app.js main.js
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ mv style.css ../../bac
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ mv style.css ../../bac
+bac     backup/ 
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ mv style.css ../../bac
+bac     backup/ 
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ mv style.css ../../backup/style_old.css
+mv: cannot stat 'style.css': No such file or directory
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ ls
+index.html  main.js
+@MarcoGiannini08 ➜ .../lezione-bash02a-giannini/esercizi/progetti/webapp (main) $ cd ../../archivio/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ rm note.txt 
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ rm -i readme.md
+rm: remove regular empty file 'readme.md'? 
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls
+attivita.txt  budget_2023.xlsx  budget_2024.xlsx  documento_febbraio.pdf  documento_gennaio.pdf  documento_marzo.pdf  foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg  presentazione.pptx  readme.md  relazione_finale.docx  relazione_intermedia.docx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ rm -i readme.md
+rm: remove regular empty file 'readme.md'? y
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls
+attivita.txt  budget_2023.xlsx  budget_2024.xlsx  documento_febbraio.pdf  documento_gennaio.pdf  documento_marzo.pdf  foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg  presentazione.pptx  relazione_finale.docx  relazione_intermedia.docx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ cd ..
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ mkdir temp 
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ touch temp/a.txt temp/b.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ rm -r temp
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls
+archivio  bac  backup  documenti  log  progetti  sandbox
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cd archivio/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *.jpg
+foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *.pdf
+documento_febbraio.pdf  documento_gennaio.pdf  documento_marzo.pdf
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *2024*
+budget_2024.xlsx  foto_napoli_2024.jpg  foto_roma_2024.jpg
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ cp *.jpg ../backup/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls ../backup/
+foto_milano_2023.jpg  foto_napoli_2024.jpg  foto_roma_2023.jpg  foto_roma_2024.jpg  progetti  todo.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls relazione*
+relazione_finale.docx  relazione_intermedia.docx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *.xlsx *.docx
+budget_2023.xlsx  budget_2024.xlsx  relazione_finale.docx  relazione_intermedia.docx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls foto_roma*
+foto_roma_2023.jpg  foto_roma_2024.jpg
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls budget_202[34].xlsx
+budget_2023.xlsx  budget_2024.xlsx
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls documento_???????.pdf
+documento_gennaio.pdf
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ cd ../sandbox/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/sandbox (main) $ echo "mela" > frutti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/sandbox (main) $ echo "banana" >> frutti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/sandbox (main) $ echo "arancia" >> frutti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/sandbox (main) $ cat frutti.txt
+mela
+banana
+arancia
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/sandbox (main) $ cd ../archivio/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *.jpg > ../sandbox/elenco_foto.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ ls *.pdf >> ../sandbox/elenco_foto.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ cat ../sandbox/elenco_foto.txt
+foto_milano_2023.jpg
+foto_napoli_2024.jpg
+foto_roma_2023.jpg
+foto_roma_2024.jpg
+documento_febbraio.pdf
+documento_gennaio.pdf
+documento_marzo.pdf
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/archivio (main) $ cd ../log/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ head -n 5 server.log > ../sandbox/log_estratto.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ tail -n 3 server.log >> ../sandbox/log_estratto.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat ../sandbox/log_estratto.txt
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:10:30 [WARNING] Tentativo di accesso non autorizzato da 192.168.1.100
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat server.log | grep "ERROR"
+2024-01-15 08:20:45 [ERROR] Connessione al database persa
+2024-01-15 08:20:46 [ERROR] Timeout nella riconnessione al database
+2024-01-15 08:45:10 [ERROR] File non trovato: /images/logo.png - 404
+2024-01-15 09:45:00 [ERROR] Impossibile inviare email di notifica
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat server.log | grep "WARNING" | wc -l
+4
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat server.log | grep "INFO" > ../sandbox/solo_info.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat ../sandbox/solo_info.txt
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+2024-01-15 08:05:16 [INFO] Richiesta GET /style.css - 200 OK
+2024-01-15 08:15:00 [INFO] Richiesta POST /api/login - 200 OK
+2024-01-15 08:20:50 [INFO] Riconnessione al database riuscita
+2024-01-15 08:30:00 [INFO] Richiesta GET /api/studenti - 200 OK
+2024-01-15 08:40:00 [INFO] Richiesta PUT /api/studenti/15 - 200 OK
+2024-01-15 08:50:00 [INFO] Backup automatico completato
+2024-01-15 09:00:00 [INFO] Richiesta GET /api/classi - 200 OK
+2024-01-15 09:30:00 [INFO] Pulizia cache completata
+2024-01-15 10:00:00 [INFO] Server in fase di arresto
+2024-01-15 10:00:01 [INFO] Connessione al database chiusa
+2024-01-15 10:00:02 [INFO] Server arrestato correttamente
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat accessi.log | grep "fallito"
+2024-01-15 08:10:30 admin login fallito 192.168.1.100
+2024-01-15 08:10:31 admin login fallito 192.168.1.100
+2024-01-15 08:35:00 guest login fallito 192.168.1.50
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat accessi.log | grep "successo" | wc -l
+5
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat accessi.log | grep "login" | awk '{print $3}' | sort | uniq
+admin
+anna.verdi
+guest
+luca.bianchi
+mario.rossi
+sara.neri
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ ls /workspaces/*Lezione_Bash02*/esercizi/archivio/*.jpg | wc -l
+ls: cannot access '/workspaces/*Lezione_Bash02*/esercizi/archivio/*.jpg': No such file or directory
+0
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat /workspaces/*Lezione_Bash02*/esercizi/documenti/appunti_reti.txt | grep "livello"
+cat: '/workspaces/*Lezione_Bash02*/esercizi/documenti/appunti_reti.txt': No such file or directory
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ grep "database" /workspaces/*Lezione_Bash02*/esercizi/log/server.log | wc -l
+grep: /workspaces/*Lezione_Bash02*/esercizi/log/server.log: No such file or directory
+0
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cd ../archivio/*.jpg
+bash: cd: too many arguments
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cd ../archivio/*.jpg | wc -1
+bash: cd: too many arguments
+wc: invalid option -- '1'
+Try 'wc --help' for more information.
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ 
