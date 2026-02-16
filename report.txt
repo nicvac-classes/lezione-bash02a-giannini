@@ -231,18 +231,57 @@ guest
 luca.bianchi
 mario.rossi
 sara.neri
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ ls /workspaces/*Lezione_Bash02*/esercizi/archivio/*.jpg | wc -l
-ls: cannot access '/workspaces/*Lezione_Bash02*/esercizi/archivio/*.jpg': No such file or directory
-0
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cat /workspaces/*Lezione_Bash02*/esercizi/documenti/appunti_reti.txt | grep "livello"
-cat: '/workspaces/*Lezione_Bash02*/esercizi/documenti/appunti_reti.txt': No such file or directory
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ grep "database" /workspaces/*Lezione_Bash02*/esercizi/log/server.log | wc -l
-grep: /workspaces/*Lezione_Bash02*/esercizi/log/server.log: No such file or directory
-0
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cd ../archivio/*.jpg
-bash: cd: too many arguments
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ cd ../archivio/*.jpg | wc -1
-bash: cd: too many arguments
-wc: invalid option -- '1'
-Try 'wc --help' for more information.
-@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi/log (main) $ 
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ ls /workspaces/lezione-bash02a-giannini/esercizi/archivio/*.jpg | wc 
+      4       4     300
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ cat /workspaces/lezione-bash02a-giannini/esercizi/documenti/appunti_reti.txt | grep "livello"
+- Internet (livello 3)
+- Trasporto (livello 4)
+Ogni livello comunica solo con il livello adiacente.
+Il principio di incapsulamento prevede che ogni livello aggiunga un header ai dati.
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ gre
+grep       gresource  
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ gre
+grep       gresource  
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ grep "database" /workspaces/lezione-bash02a-giannini/esercizi/log/server.log | wc
+      5      36     307
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini (main) $ cd /workspaces/lezione-bash02a-giannini/esercizi/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cp documenti/*.txt backup/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls backup/
+appunti_database.txt  appunti_reti.txt  appunti_sicurezza.txt  todo.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ grep "192.168.1.100" /workspaces/lezione-bash02a-giannini/esercizi/log/accessi.log  | wc 
+      4      23     210
+      @MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cd /workspaces/lezione-bash02a-giannini/esercizi/
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ echo "=== REPORT ===" > sandbox/report.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ ls archivio/ >> sandbox/report.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ echo "" >> sandbox/report.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ head -n 3 log/server.log >> sandbox/report.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cat sandbox/report.txt
+=== REPORT ===
+budget_2023.xlsx
+budget_2024.xlsx
+documento_febbraio.pdf
+documento_gennaio.pdf
+documento_marzo.pdf
+foto_milano_2023.jpg
+foto_napoli_2024.jpg
+foto_roma_2023.jpg
+foto_roma_2024.jpg
+note.txt
+presentazione.pptx
+readme.md
+relazione_finale.docx
+relazione_intermedia.docx
+
+2024-01-15 08:00:01 [INFO] Server avviato sulla porta 8080
+2024-01-15 08:00:02 [INFO] Connessione al database stabilita
+2024-01-15 08:05:15 [INFO] Richiesta GET /index.html - 200 OK
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ grep "fallito" log/accessi.log > sandbox/tentativi_falliti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ echo "---" >> sandbox/tentativi_falliti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ echo -n "Totale tentativi falliti: " >> sandbox/tentativi_falliti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ grep "fallito" log/accessi.log | wc -l >> sandbox/tentativi_falliti.txt
+@MarcoGiannini08 ➜ /workspaces/lezione-bash02a-giannini/esercizi (main) $ cat sandbox/tentativi_falliti.txt
+2024-01-15 08:10:30 admin login fallito 192.168.1.100
+2024-01-15 08:10:31 admin login fallito 192.168.1.100
+2024-01-15 08:35:00 guest login fallito 192.168.1.50
+---
+Totale tentativi falliti: 3
